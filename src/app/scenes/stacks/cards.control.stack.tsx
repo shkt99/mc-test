@@ -13,7 +13,10 @@ const CardsControlStack = () => (
   <Stack.Navigator
     initialRouteName="CardsControl"
     screenOptions={{
-      headerLeftContainerStyle: {paddingLeft: 20},
+      headerLeftContainerStyle: {
+        paddingLeft: 20,
+        marginBottom: 10,
+      },
       headerTintColor: '#fff',
       headerBackTitleVisible: false,
       headerTitleStyle: {
@@ -21,6 +24,7 @@ const CardsControlStack = () => (
         fontSize: 18,
         fontWeight: '600',
         lineHeight: 24,
+        marginBottom: 10,
       },
       headerStyle: {
         height: 92,

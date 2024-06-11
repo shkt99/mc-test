@@ -17,8 +17,7 @@ const ProgressBar = ({
   borderWidth = 1,
   borderColor = 'transparent',
 }: ProgressBarProps) => {
-  const p = Number.isNaN(progress) ? 0 : progress;
-
+  const p = isNaN(progress) ? 0 : progress;
   return (
     <Progress.Bar
       progress={p}

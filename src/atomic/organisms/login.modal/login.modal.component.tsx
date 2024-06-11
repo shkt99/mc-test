@@ -35,7 +35,6 @@ const LoginModal: React.FC<ModalProps> = ({
 }) => {
   const height = Dimensions.get('window').height;
   return (
-    // <View>
     <Modal
       isVisible={visibility}
       backdropOpacity={0.3}
@@ -50,7 +49,7 @@ const LoginModal: React.FC<ModalProps> = ({
         style={[
           {
             ...styles.modalContainer,
-            marginTop: height > 900 ? height * modalHeight : height * 0.15,
+            marginTop: height > 700 ? height * modalHeight : height * 0.15,
           },
         ]}>
         <KeyboardAvoidingView behavior="padding">
@@ -80,14 +79,12 @@ const LoginModal: React.FC<ModalProps> = ({
         </KeyboardAvoidingView>
       </ScrollView>
     </Modal>
-    // </View>
   );
 };
 
 const styles = StyleSheet.create({
   modal: {justifyContent: 'flex-end', margin: 0},
   modalContainer: {
-    flex: 1,
     backgroundColor: 'white',
   },
   modalTopColor: {height: 10},

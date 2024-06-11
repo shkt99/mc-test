@@ -18,7 +18,7 @@ import CardMenuCard from '../../../atomic/molecules/card.menu.card/card.menu.car
 import CardDetailCard from '../../../atomic/organisms/card.details/card.details.component';
 import CardDefault from '../../../atomic/molecules/card.default/card.default.component';
 import {useNavigation} from '@react-navigation/native';
-import {RootStackParamList} from '../stacks/root-stack-param-list';
+import {RootStackParamList} from '../../Navigation';
 
 type NavigationsProps = StackNavigationProp<
   RootStackParamList,
@@ -64,15 +64,6 @@ const CardsScreen = () => {
 
   const [displayCardDetails, setDisplayCardDetails] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   navigation.setOptions({title: 'new title'});
-  //   if (displayCardDetails) {
-  //     navigation.setOptions({headerLeft: () => <Text>Anything</Text>});
-  //   } else {
-  //     navigation.setOptions({headerLeft: () => <Text>Nothing</Text>});
-  //   }
-  // }, [displayCardDetails]);
-
   useEffect(() => {
     const data = getBalance();
     data && setBalanceData(data);
@@ -90,7 +81,6 @@ const CardsScreen = () => {
 
   const onDetails = () => {
     setDisplayCardDetails(!displayCardDetails);
-    // Alert.alert('Details clicked');
   };
 
   return (

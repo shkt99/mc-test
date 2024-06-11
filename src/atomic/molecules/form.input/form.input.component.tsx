@@ -10,18 +10,6 @@ import {
   StyleSheet,
   Image,
 } from 'react-native';
-import Colors from '../../../utils/Colors';
-
-export const enum IconType {
-  EMAIL,
-  PASSWORD,
-  USER,
-  PHONE,
-  MASK,
-  UNMASK,
-  OTPICON,
-  CALENDAR,
-}
 
 type FormInputProps = {
   rightIcon?: boolean;
@@ -60,6 +48,7 @@ const FormInput: FC<FormInputProps> = ({
   keyboard = 'default',
   maxTextLength = 99999,
   editable = true,
+  inputBoxStyle,
 }) => {
   const getIcon = () => {
     if (secureText) {
@@ -78,7 +67,7 @@ const FormInput: FC<FormInputProps> = ({
     );
   };
   return (
-    <View>
+    <View style={inputBoxStyle}>
       {title && <Text>{title}</Text>}
       <View style={styles.inputContainer}>
         <TextInput
@@ -115,7 +104,7 @@ const styles = StyleSheet.create({
   },
   inputTextTitle: {
     fontSize: 14,
-    color: Colors.BLACK,
+    color: 'black',
     marginVertical: 4,
   },
   inputContainer: {
