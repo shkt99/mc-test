@@ -25,7 +25,6 @@ const LoginForm: React.FC<LoginFormProps> = ({
   error,
 }) => {
   const [mask, setMask] = useState<boolean>(true);
-  //   const formikRef = useRef<FormikProps<LoginForm>>(null);
 
   const PointsSchema = Yup.object().shape({
     email: Yup.string()
@@ -62,8 +61,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
               touched,
             }: any) => (
               <View>
-                <Text>User Name</Text>
                 <FormInput
+                  title={'User Name'}
                   testId="form-email-text-input"
                   errors={errors.email}
                   handleBlur={handleBlur('email')}
@@ -73,9 +72,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
                   placeholder={'Email'}
                   inputTextStyle={styles.emailBox}
                 />
-
-                <Text style={styles.marginTop}>Password</Text>
                 <FormInput
+                  title={'Password'}
                   testId="form-password-text-input"
                   errors={errors.password}
                   handleBlur={handleBlur('password')}
@@ -121,7 +119,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
   },
-  passwordBox: {flex: 1, height: 44, backgroundColor: '#F8F8F8', marginTop: 10},
+  passwordBox: {marginTop: 10},
   emailBox: {
     height: 44,
     backgroundColor: '#F8F8F8',

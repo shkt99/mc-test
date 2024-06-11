@@ -1,6 +1,6 @@
 import {View, FlatList, StyleSheet} from 'react-native';
 import React from 'react';
-import ServiceProviderCard from '../../molecules/serviceProviderCard/serviceProvidercard.component';
+import ServiceProviderCard from '../../molecules/service.provider.card/service.provider.card.component';
 import {ProvidersData} from '../../../modals';
 
 type ProviderConatinerProps = {
@@ -36,11 +36,8 @@ const styles = StyleSheet.create({
   container: {flex: 1, width: 377, alignSelf: 'center'},
   listContainer: {
     paddingHorizontal: 10,
-    // flex: 1,
     width: 377,
     alignSelf: 'center',
-    // height: '100%',
-    // backgroundColor: 'red',
   },
   cardContainer: {
     margin: 10,

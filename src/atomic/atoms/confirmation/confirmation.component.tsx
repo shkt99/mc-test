@@ -4,12 +4,12 @@ import {Container, StyledText} from './style';
 
 type ConfirmationProps = {
   confirmationVisible: boolean;
-  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+  setConfirmationVisible: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const Confirmation = ({
   confirmationVisible,
-  setOpenModal,
+  setConfirmationVisible,
 }: ConfirmationProps) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -28,7 +28,7 @@ const Confirmation = ({
           useNativeDriver: true,
         }),
       ]).start(() => {
-        setOpenModal(false);
+        setConfirmationVisible(false);
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

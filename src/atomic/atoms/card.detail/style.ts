@@ -1,9 +1,5 @@
 import styled from 'styled-components/native';
 
-// export const Container = styled(View)<StyledViewProps>`
-//   ${({style}) => style}// Apply dynamic styles passed via props
-// `;
-
 export const Title = styled.Text`
   color: ${({theme}) => theme.colors.primary};
   font-size: 16px;

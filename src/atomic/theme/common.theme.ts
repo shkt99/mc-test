@@ -16,7 +16,6 @@ export const CommonTheme: DefaultTheme = {
     black: BrandColors.Black,
     grey100: BrandColors.Grey_100,
   },
-  flex: {flex: 1},
   gap: {
     [10]: 10,
     [15]: 15,

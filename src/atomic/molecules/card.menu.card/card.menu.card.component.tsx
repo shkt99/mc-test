@@ -7,7 +7,6 @@ import {Container} from './styles';
 type CardMenuProps = {
   cardLocked: boolean;
   setCardLocked: React.Dispatch<React.SetStateAction<boolean>>;
-  // isCardLocked: () => void;
   onControls: () => void;
   onDetails: () => void;
 };
@@ -28,7 +27,6 @@ const CardMenuCard = ({
       <CardMenu
         text={cardLocked ? 'Locked' : 'Lock Card'}
         image={
-          //@TODO: Change it
           cardLocked
             ? require('../../../images/lockedCard.png')
             : require('../../../images/lockCard.png')

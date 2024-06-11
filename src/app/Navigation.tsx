@@ -7,7 +7,13 @@ import {DashboardStack} from './scenes/stacks/dashboard.stack';
 import BottomTabStack from './scenes/stacks/bottom.tab.stack';
 import CardsControlStack from './scenes/stacks/cards.control.stack';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Dashboard: undefined;
+  BottomTab: undefined;
+  CardsControlStack: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 function Navigation(): ReactElement {
   return (

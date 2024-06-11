@@ -25,27 +25,32 @@ const CurrentBalanceCard = ({balanceData}: CurrentBalanceCardProps) => {
             1 -
             parseFloat(balanceData.available) / parseFloat(balanceData.total)
           }
-          width={Math.min(327 - 50, 378)}
+          width={327}
           color={'#7A9A02'}
         />
       </View>
       <View style={styles.creditContainer}>
-        <View style={styles.creditItemContainer}>
-          <TextHeader text={'Available Credit:'} style={styles.amountHeader} />
-          <CurrentBalanceAmount
-            balance={balanceData.available}
-            style={styles.amount}
-          />
-        </View>
-        <View style={styles.creditItemContainer}>
-          <TextHeader
-            text={'Total Credit Limit:'}
-            style={styles.amountHeader}
-          />
-          <CurrentBalanceAmount
-            balance={balanceData.total}
-            style={styles.amount}
-          />
+        <View style={styles.creditInnerContainer}>
+          <View style={styles.creditItemContainer}>
+            <TextHeader
+              text={'Available Credit:'}
+              style={styles.amountHeader}
+            />
+            <CurrentBalanceAmount
+              balance={balanceData.available}
+              style={styles.amount}
+            />
+          </View>
+          <View style={styles.creditItemContainer}>
+            <TextHeader
+              text={'Total Credit Limit:'}
+              style={styles.amountHeader}
+            />
+            <CurrentBalanceAmount
+              balance={balanceData.total}
+              style={styles.amount}
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -74,7 +79,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   prgressBarContainer: {alignSelf: 'center', marginTop: 20},
-  creditContainer: {marginHorizontal: 25, marginTop: 20, gap: 10},
+  creditContainer: {
+    marginTop: 20,
+    gap: 10,
+  },
+  creditInnerContainer: {alignSelf: 'center', width: 327},
   creditItemContainer: {
     display: 'flex',
     flexDirection: 'row',

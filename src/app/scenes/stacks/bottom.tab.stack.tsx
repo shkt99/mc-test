@@ -30,6 +30,7 @@ const BottomTabStack = () => (
         fontSize: 18,
         fontWeight: '600',
         lineHeight: 24,
+        marginBottom: 10,
       },
       headerStyle: {
         height: 92,
@@ -42,6 +43,7 @@ const BottomTabStack = () => (
         tabBarIcon: ({focused}) => {
           return returnIcon(focused);
         },
+        tabBarLabel: 'Home',
         title: 'Cards',
       })}
     />
