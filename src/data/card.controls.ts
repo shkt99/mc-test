@@ -1,11 +1,3 @@
-// export type CardControlOptionsData = {
-//     id: string;
-//     optionName: string;
-//     optionSelectedValue: string;
-//     leftIcon: string;
-//     rightIcon: string;
-//   };
-
 import {CardControlOptionsData} from '../modals';
 
 export const cardControls: CardControlOptionsData[][] = [

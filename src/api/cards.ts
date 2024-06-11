@@ -1,4 +1,8 @@
-import {balance, mastercardDetails, recentTransactions} from '../data/balance';
+import {
+  balance,
+  mastercardDetails,
+  recentTransactions,
+} from '../data/card.data';
 
 export const getBalance = () => {
   return balance;

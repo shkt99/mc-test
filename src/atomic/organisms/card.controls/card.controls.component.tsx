@@ -4,12 +4,14 @@ import CardControlOptionsCard from '../../molecules/card.control.options.card/ca
 import {CardControlOptionsData} from '../../../modals';
 
 type CardControlsComponentProps = {
-  cardModal: CardControlOptionsData[][];
+  cardControlOptions: CardControlOptionsData[][];
 };
-const CardControlsComponent = ({cardModal}: CardControlsComponentProps) => {
+const CardControlsComponent = ({
+  cardControlOptions,
+}: CardControlsComponentProps) => {
   return (
     <View style={styles.gap15}>
-      {cardModal.map((modal: CardControlOptionsData[], index) => (
+      {cardControlOptions.map((modal: CardControlOptionsData[], index) => (
         <CardControlOptionsCard optionsData={modal} key={index} />
       ))}
     </View>

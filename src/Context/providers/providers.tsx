@@ -23,7 +23,9 @@ export const ProvidersContext = createContext<ProvidersContextType>({
 type ProviderProps = {
   children: React.ReactNode;
 };
-export const ProvidersProvider: React.FC<ProviderProps> = ({children}) => {
+export const ProvidersProvider: React.FC<ProviderProps> = ({
+  children,
+}: ProviderProps) => {
   const [providersData, setProvidersData] = useState<ProvidersData[]>([
     {
       id: '',

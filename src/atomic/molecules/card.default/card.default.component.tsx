@@ -9,10 +9,7 @@ const CARD_WIDTH = 260;
 const CardDefault = ({cardLocked}: CardDefaultProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.mastercardNumber}>
-        Mastercard •••• 1234
-        {/* {masterCardDetails.mastercardNumber.slice(-4)} */}
-      </Text>
+      <Text style={styles.mastercardNumber}>Mastercard •••• 1234</Text>
       <View style={styles.imageContainer}>
         <Image
           source={

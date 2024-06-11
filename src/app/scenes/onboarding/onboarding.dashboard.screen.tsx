@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {StackNavigationProp} from '@react-navigation/stack';
-import ServiceProviderContainer from '../../../atomic/organisms/serviceProviderContainer/serviceProviderContainer.component';
+import ServiceProviderContainer from '../../../atomic/organisms/service.provider.container/service.provider.container.component';
 import {LoginData, ProvidersData} from '../../../modals';
 import LoginModal from '../../../atomic/organisms/login.modal/login.modal.component';
 import Confirmation from '../../../atomic/atoms/confirmation/confirmation.component';
@@ -11,13 +11,11 @@ import {enableFaceId} from '../../../utils';
 import OnboardingTile from '../../../atomic/molecules/onboarding.title/onboarding.title.component';
 import OnboardingButtons from '../../../atomic/molecules/onborading.buttons/onboarding.buttons.component';
 import {ConfirmationContainer, Container, ProviderContainer} from './style';
-import {RootStackParamList} from '../stacks/root-stack-param-list';
-import {useNavigation} from '@react-navigation/native';
 
-type NavigationsProps = StackNavigationProp<
-  RootStackParamList,
-  'CardsControlStack'
->;
+import {useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../Navigation';
+
+type NavigationsProps = StackNavigationProp<RootStackParamList, 'BottomTab'>;
 
 const OnboardingDashboardScreen = () => {
   const navigation = useNavigation<NavigationsProps>();
@@ -100,10 +98,10 @@ const OnboardingDashboardScreen = () => {
           onViewDashBoardClick={onViewDashBoardClick}
         />
       )}
-      <ConfirmationContainer>
+      <ConfirmationContainer confirmationVisible={confirmationVisible}>
         <Confirmation
           confirmationVisible={confirmationVisible}
-          setOpenModal={setOpenModal}
+          setConfirmationVisible={setConfirmationVisible}
         />
       </ConfirmationContainer>
 

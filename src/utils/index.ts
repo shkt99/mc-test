@@ -24,24 +24,20 @@ export const enableFaceId = async () => {
   const biometricsEnabled = await getItem('biometricsEnabled');
   const {available} = await rnBiometrics.isSensorAvailable();
   if (!biometricsEnabled && available) {
-    Alert.alert(
-      'Biometric Login',
-      'Would you like to use biometric login next time?',
-      [
-        {
-          text: 'No',
-          onPress: async () => {
-            await setItem('biometricsEnabled', 'false');
-          },
+    Alert.alert('Biometric Login', 'Would you like to use biometrics?', [
+      {
+        text: 'No',
+        onPress: async () => {
+          await setItem('biometricsEnabled', 'false');
         },
-        {
-          text: 'Yes',
-          onPress: async () => {
-            await setItem('biometricsEnabled', 'true');
-          },
+      },
+      {
+        text: 'Yes',
+        onPress: async () => {
+          await setItem('biometricsEnabled', 'true');
         },
-      ],
-    );
+      },
+    ]);
   }
 };
 
