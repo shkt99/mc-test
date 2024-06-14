@@ -54,15 +54,15 @@ export const recentTransactions = [
     image: require('../images/amazon.png'),
     date: '2024-05-20T06:00:00Z',
     amount: '125.30',
-    points: '5',
+    points: '125',
   },
   {
     id: '3',
     name: 'Dunkin Donuts',
     image: require('../images/dunkinDonuts.png'),
     date: '2024-05-15T19:45:00Z',
-    amount: '5.43',
-    points: '5',
+    amount: '10.84',
+    points: '10',
   },
   {
     id: '4',

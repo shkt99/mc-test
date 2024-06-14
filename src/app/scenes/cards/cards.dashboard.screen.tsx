@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {Button, ScrollView, StyleSheet, View} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {
   getBalance,
@@ -63,6 +63,28 @@ const CardsScreen = () => {
   const [cardLocked, setCardLocked] = useState<boolean>(false);
 
   const [displayCardDetails, setDisplayCardDetails] = useState<boolean>(false);
+
+  const crossBtn = () => {
+    return (
+      <View>
+        <Button
+          onPress={() => setDisplayCardDetails(false)}
+          title="X"
+          color="#fff"
+        />
+      </View>
+    );
+  };
+  useEffect(() => {
+    if (displayCardDetails) {
+      navigation.setOptions({
+        headerLeft: () => crossBtn(),
+      });
+    } else {
+      navigation.setOptions({headerLeft: () => null});
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [displayCardDetails]);
 
   useEffect(() => {
     const data = getBalance();

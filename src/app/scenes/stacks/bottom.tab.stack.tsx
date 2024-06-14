@@ -19,27 +19,12 @@ export const getHeader = () => <HeaderBackground />;
 const Tab = createBottomTabNavigator();
 
 const BottomTabStack = () => (
-  <Tab.Navigator
-    backBehavior="history"
-    initialRouteName={'Cards'}
-    screenOptions={() => ({
-      tabBarInactiveTintColor: '#ADADAD',
-      headerBackground: () => getHeader(),
-      headerTitleStyle: {
-        color: '#fff',
-        fontSize: 18,
-        fontWeight: '600',
-        lineHeight: 24,
-        marginBottom: 10,
-      },
-      headerStyle: {
-        height: 92,
-      },
-    })}>
+  <Tab.Navigator backBehavior="history" initialRouteName={'Cards'}>
     <Tab.Screen
       name={'Cards'}
       component={CardsStack}
       options={() => ({
+        headerShown: false,
         tabBarIcon: ({focused}) => {
           return returnIcon(focused);
         },
@@ -54,7 +39,7 @@ const BottomTabStack = () => (
         tabBarIcon: ({focused}) => {
           return returnIcon(focused);
         },
-        headerShown: true,
+        headerShown: false,
         headerTitle: 'Rewards',
       })}
     />
@@ -65,7 +50,7 @@ const BottomTabStack = () => (
         tabBarIcon: ({focused}) => {
           return returnIcon(focused);
         },
-        headerShown: true,
+        headerShown: false,
         headerTitle: 'PFM',
       })}
     />
@@ -76,7 +61,7 @@ const BottomTabStack = () => (
         tabBarIcon: ({focused}) => {
           return returnIcon(focused);
         },
-        headerShown: true,
+        headerShown: false,
         headerTitle: 'More ',
       })}
     />

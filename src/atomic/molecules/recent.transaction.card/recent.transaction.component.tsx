@@ -11,7 +11,14 @@ type RecentTransactionsCardProps = {
 const RecentTransactionCard = ({
   transactionsData,
 }: RecentTransactionsCardProps) => {
-  const firstThree = transactionsData.slice(0, 3);
+  const sortedTransactions = transactionsData.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+
+    return dateB.getTime() - dateA.getTime();
+  });
+
+  const firstThree = sortedTransactions.slice(0, 3);
 
   return (
     <View>

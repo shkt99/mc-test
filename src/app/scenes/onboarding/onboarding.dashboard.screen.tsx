@@ -98,12 +98,14 @@ const OnboardingDashboardScreen = () => {
           onViewDashBoardClick={onViewDashBoardClick}
         />
       )}
-      <ConfirmationContainer confirmationVisible={confirmationVisible}>
-        <Confirmation
-          confirmationVisible={confirmationVisible}
-          setConfirmationVisible={setConfirmationVisible}
-        />
-      </ConfirmationContainer>
+      {confirmationVisible && (
+        <ConfirmationContainer confirmationVisible={confirmationVisible}>
+          <Confirmation
+            confirmationVisible={confirmationVisible}
+            setConfirmationVisible={setConfirmationVisible}
+          />
+        </ConfirmationContainer>
+      )}
 
       <Container>
         <OnboardingTile />

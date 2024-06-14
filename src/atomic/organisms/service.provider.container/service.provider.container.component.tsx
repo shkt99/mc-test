@@ -35,9 +35,9 @@ const ServiceProviderContainer = ({
 const styles = StyleSheet.create({
   container: {flex: 1, width: 377, alignSelf: 'center'},
   listContainer: {
-    paddingHorizontal: 10,
     width: 377,
     alignSelf: 'center',
+    alignItems: 'center',
   },
   cardContainer: {
     margin: 10,

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   subTitleContainer: {
     justifyContent: 'center',
     marginTop: 15,
-    marginHorizontal: 50,
+    marginHorizontal: 40,
     alignItems: 'center',
   },
   subTitle: {fontSize: 16, lineHeight: 28, textAlign: 'center'},
